@@ -1,0 +1,872 @@
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* ==================== Desktop (1400px and above) ==================== */
+@media (min-width: 1400px) {
+  .product-container {
+    grid-template-columns: 330px 1fr;
+    gap: 40px;
+  }
+  
+
+}
+
+/* ==================== Tablet (992px - 1199px) ==================== */
+@media (max-width: 1199px) {
+  .product-container {
+    grid-template-columns: 250px 1fr;
+    gap: 25px;
+  }
+  
+  .sidebar-heading {
+    font-size: 20px;
+  }
+  
+  .sidebar ul li a {
+    font-size: 15px;
+    padding: 12px 18px;
+  }
+  
+  .product-section-title h2 {
+    font-size: 24px;
+  }
+  
+  .variant {
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .variant img {
+    width: 180px;
+    min-width: 180px;
+    max-width: 180px;
+  }
+  
+  .variant-name {
+    font-size: 20px;
+  }
+}
+
+/* ==================== Tablet Portrait (768px - 991px) ==================== */
+@media (max-width: 991px) {
+  .product-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .sidebar {
+    position: relative;
+    top: 0;
+    margin-bottom: 30px;
+    order: -1;
+    max-height: none;
+    overflow: visible;
+  }
+  
+  /* Collapsible sidebar on mobile */
+  .sidebar-toggle {
+    display: none; /* Hidden on tablet, shown on mobile */
+  }
+  
+  .sidebar-heading {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .sidebar ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 0;
+  }
+  
+  .sidebar ul li a {
+    font-size: 14px;
+    padding: 12px 15px;
+    text-align: center;
+  }
+  
+  .product-banner .banner-image {
+    height: 250px;
+  }
+  
+  .product-section {
+    padding: 25px 20px;
+    margin-bottom: 30px;
+  }
+  
+  .product-section-title h2 {
+    font-size: 22px;
+  }
+  
+  .variant {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+  }
+  
+  .variant img {
+    width: 100%;
+    max-width: 250px;
+    min-width: auto;
+    margin: 0 auto;
+  }
+  
+  .variant-details {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .variant-name {
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  /* Header adjustments */
+  .site-navbar-wrap.js-sticky-header {
+    padding: 8px 0;
+  }
+  
+  .site-navbar-wrap.js-sticky-header.is-sticky,
+  .sticky-wrapper.is-sticky .site-navbar-wrap.js-sticky-header {
+    padding: 5px 0;
+  }
+}
+
+/* ==================== Mobile (576px - 767px) ==================== */
+@media (max-width: 767px) {
+  .product-container {
+    padding: 0 10px;
+    gap: 15px;
+  }
+  
+  .sidebar {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  /* Mobile sidebar toggle button */
+  .sidebar-toggle {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 15px;
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .sidebar-toggle::after {
+    content: "▼";
+    font-size: 12px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+  
+  .sidebar.collapsed .sidebar-toggle::after {
+    transform: rotate(-90deg);
+  }
+  
+  .sidebar.collapsed ul {
+    display: none !important;
+  }
+  
+  .sidebar:not(.collapsed) ul {
+    display: grid !important;
+  }
+  
+  .sidebar-heading {
+    display: none;
+  }
+  
+  .sidebar:not(.collapsed) {
+    max-height: none;
+    overflow: visible;
+  }
+  
+  /* Product page mobile fixes */
+  .product-section {
+    margin-bottom: 10px;
+  }
+  
+  .product-header {
+    font-size: 16px;
+    padding: 12px 15px;
+  }
+  
+  .product-content.active {
+    padding: 15px;
+  }
+  
+  .variant {
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .variant img {
+    width: 100%;
+    max-width: 200px;
+    min-width: auto;
+    margin: 0 auto;
+  }
+  
+  .variant-details {
+    text-align: left;
+    width: 100%;
+  }
+  
+  .variant-name {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .variant-details ul {
+    font-size: 14px;
+    margin: 8px 0 8px 18px;
+  }
+  
+
+  
+  .sidebar-heading {
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+  }
+  
+  .sidebar ul {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .sidebar ul li a {
+    font-size: 14px;
+    padding: 12px 15px;
+    min-height: 44px; /* Touch-friendly */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .product-banner {
+    margin-bottom: 20px;
+  }
+  
+  .product-banner .banner-image {
+    height: 200px;
+  }
+  
+  .product-section {
+    padding: 20px 15px;
+    margin-bottom: 25px;
+  }
+  
+  .product-section-title {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+  }
+  
+  .product-section-title h2 {
+    font-size: 20px;
+  }
+  
+  .variant {
+    padding: 15px;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .variant img {
+    max-width: 200px;
+    padding: 10px;
+  }
+  
+  .variant-name {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  
+  .variant-details {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .variant-details ul {
+    margin: 8px 0 8px 20px;
+    font-size: 14px;
+  }
+  
+  .variant-details ul li {
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  
+  /* Header mobile adjustments */
+  .site-navbar-wrap.js-sticky-header {
+    padding: 5px 0;
+  }
+  
+  .site-navbar-wrap.js-sticky-header.is-sticky,
+  .sticky-wrapper.is-sticky .site-navbar-wrap.js-sticky-header {
+    padding: 5px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Breadcrumb adjustments */
+  section.breadcrumber-section {
+    padding: 40px 0;
+  }
+  
+  ul.breadcrumber-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  ul.breadcrumber-list li,
+  ul.breadcrumber-list li a {
+    font-size: 14px;
+  }
+}
+
+/* ==================== Small Mobile (up to 575px) ==================== */
+@media (max-width: 575px) {
+  .product-container {
+    padding: 0 8px;
+  }
+  
+  .sidebar {
+    padding: 12px;
+  }
+  
+  .sidebar-heading {
+    display: none;
+  }
+  
+  .sidebar-toggle {
+    font-size: 14px;
+    padding: 10px 12px;
+    min-height: 40px;
+  }
+  
+  .sidebar ul li a {
+    font-size: 13px;
+    padding: 10px 12px;
+    min-height: 40px;
+  }
+  
+  .product-banner .banner-image {
+    height: 180px;
+  }
+  
+  .product-section {
+    padding: 15px 12px;
+    margin-bottom: 20px;
+  }
+  
+  .product-section-title h2 {
+    font-size: 18px;
+  }
+  
+  .variant {
+    padding: 12px;
+    gap: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .variant img {
+    max-width: 150px;
+    padding: 8px;
+  }
+  
+  .variant-name {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .variant-details {
+    font-size: 13px;
+  }
+  
+  .variant-details ul {
+    margin: 6px 0 6px 18px;
+    font-size: 13px;
+  }
+  
+  .variant-details ul li {
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+  
+  /* Ensure no horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+  
+  * {
+    max-width: 100%;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ==================== Fix for all screen sizes ==================== */
+
+
+
+/* Swiper Navigation Buttons - Ensure they're visible */
+
+.swiper-button-prev, .swiper-button-next {
+    background-color: #d1d1d155;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: -22px;
+    background-size: 15px 38px;
+    z-index: 10;
+}
+
+.swiper-button-disabled {
+  opacity: 0.35 !important;
+  cursor: auto;
+  pointer-events: none;
+}
+
+/* Product Slider Navigation */
+.productSlider {
+  position: relative;
+  padding: 0 60px 30px;
+}
+
+.productSlider .swiper-button-prev {
+  left: 0;
+}
+
+.productSlider .swiper-button-next {
+  right: 0;
+}
+
+@media (max-width: 1199px) {
+  .productSlider {
+    padding: 0 50px 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .productSlider {
+    padding: 0 45px 50px;
+  }
+  
+  .productSlider .swiper-button-prev,
+  .productSlider .swiper-button-next {
+    width: 36px;
+    height: 36px;
+    background-size: 20px 36px;
+    margin-top: -18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .productSlider {
+    padding: 0 35px 40px;
+  }
+  
+  .productSlider .swiper-button-prev,
+  .productSlider .swiper-button-next {
+    width: 32px;
+    height: 32px;
+    background-size: 18px 32px;
+    margin-top: -16px;
+  }
+}
+
+
+/* Touch-friendly buttons on mobile */
+@media (max-width: 991px) {
+  a, button, .btn {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .know-more {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Fix spacing issues */
+.section-space {
+  padding: 60px 0;
+}
+
+@media (max-width: 991px) {
+  .section-space {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-space {
+    padding: 30px 0;
+  }
+}
+
+/* Product grid improvements */
+.product-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .product-grid {
+    gap: 15px;
+  }
+}
+
+/* Ensure proper alignment */
+.variant-details ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.variant-details ul li {
+  padding-left: 5px;
+}
+
+@media (max-width: 767px) {
+  .variant-details ul {
+    padding-left: 18px;
+    margin: 8px 0;
+  }
+  
+  .variant-details ul li {
+    padding-left: 3px;
+  }
+}
+
+/* Fix footer responsiveness */
+@media (max-width: 991px) {
+  .footer .container {
+    padding: 0 15px;
+  }
+  
+  .footer-box {
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Header sticky improvements */
+@media (max-width: 991px) {
+  .site-navbar-wrap.js-sticky-header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+  
+  .site-navbar-wrap.js-sticky-header.is-sticky,
+  .sticky-wrapper.is-sticky .site-navbar-wrap.js-sticky-header {
+    padding: 5px 0;
+  }
+  
+  /* Add padding to body to account for fixed header */
+  body {
+    padding-top: 0;
+  }
+  
+  /* Ensure content doesn't hide behind header */
+  .products-page {
+    margin-top: 0;
+  }
+}
+
+/* Ensure proper z-index layering */
+header {
+  z-index: 9999;
+  position: relative;
+}
+
+.site-navbar-wrap {
+  z-index: 9999;
+}
+
+/* Fix overlapping elements */
+@media (max-width: 991px) {
+  .site-navbar-wrap.js-sticky-header {
+    position: fixed !important;
+  }
+  
+  /* Ensure mobile menu doesn't overlap */
+  .site-mobile-menu {
+    z-index: 10000;
+  }
+  
+  .screen-darken {
+    z-index: 9998;
+  }
+}
+
+/* Fix any horizontal scroll issues */
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* Ensure images don't break layout */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Fix text overflow */
+p, li, span, a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Ensure proper spacing between sections */
+section {
+  margin: 0;
+  padding: 0;
+}
+
+.section-space {
+  margin: 0;
+}
+
+/* Fix product page spacing */
+.products-page {
+  padding-top: 20px;
+}
+
+@media (max-width: 991px) {
+  .products-page {
+    padding-top: 10px;
+  }
+}
+
+/* Additional spacing fixes */
+
+
+@media (max-width: 767px) {
+  .variant-details ul li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+}
+
+/* Fix alignment issues */
+.product-grid {
+  width: 100%;
+}
+
+.variant {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure proper text alignment */
+.variant-details {
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  .variant {
+    text-align: center;
+  }
+  
+  .variant-details {
+    text-align: left;
+  }
+}
+
+/* Fix font sizes for better readability */
+@media (max-width: 767px) {
+  body {
+    font-size: 15px;
+  }
+  
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+/* Fix button spacing */
+
+@media (max-width: 767px) {
+  .know-more {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 12px 24px;
+    font-size: 15px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Ensure all interactive elements are touch-friendly */
+@media (max-width: 991px) {
+  a, button, .btn, .sidebar-toggle, .sidebar ul li a {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: rgba(168, 39, 132, 0.2);
+  }
+  
+  .sidebar ul li a {
+    display: flex;
+  }
+}
+
+/* Fix product section display and spacing */
+.product-section {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ensure proper product grid spacing */
+.product-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .product-grid {
+    gap: 15px;
+  }
+}
+
+/* Ensure proper card alignment */
+.variant {
+  align-items: flex-start;
+}
+
+@media (max-width: 767px) {
+  .variant {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .variant-details {
+    text-align: left;
+  }
+}
+
+/* Fix list styling */
+.variant-details ul {
+  list-style-position: outside;
+  padding-left: 20px;
+}
+
+
+@media (max-width: 767px) {
+  .variant-details ul {
+    padding-left: 18px;
+  }
+  
+  .variant-details ul li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+}
+
+/* Ensure no broken layouts */
+.product-container {
+  min-height: 400px;
+}
+
+/* Fix footer responsiveness */
+@media (max-width: 767px) {
+  .footer .container {
+    padding: 0 15px;
+  }
+  
+  .footer-box {
+    margin-bottom: 25px;
+  }
+  
+  .footer-menu ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-menu ul li a {
+    font-size: 14px;
+    padding: 5px 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Fix text alignment and spacing */
+p, li {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Ensure proper image sizing */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Fix variant images specifically */
+
